@@ -10,8 +10,6 @@ config.resolver.unstable_enablePackageExports = true;
 
 const withNativeWindConfig = withNativeWind(config, { input: "./global.css" });
 
-console.log(config.resolver.unstable_conditionNames);
-
 const withStorybookConfig = withStorybook(withNativeWindConfig, {
   enabled: true,
   configPath: path.resolve(__dirname, "./.rnstorybook"),
