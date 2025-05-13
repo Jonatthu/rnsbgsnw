@@ -3,14 +3,17 @@ module.exports = function (api) {
   return {
     presets: [
       [
-        'babel-preset-expo',
+        "babel-preset-expo",
         {
-          jsxImportSource: 'nativewind',
-          'react-compiler': {},
+          jsxImportSource: "nativewind",
+          "react-compiler": {},
         },
       ],
-      'nativewind/babel',
+      "nativewind/babel",
     ],
-    plugins: [['babel-plugin-react-docgen-typescript', { exclude: 'node_modules' }]],
+    plugins: [
+      "@babel/plugin-transform-class-static-block",
+      ["babel-plugin-react-docgen-typescript", { exclude: "node_modules" }],
+    ],
   };
 };
