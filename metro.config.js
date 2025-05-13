@@ -6,8 +6,6 @@ const { withNativeWind } = require("nativewind/metro");
 
 const config = getDefaultConfig(__dirname);
 
-config.resolver.unstable_enablePackageExports = true;
-
 const withNativeWindConfig = withNativeWind(config, { input: "./global.css" });
 
 const withStorybookConfig = withStorybook(withNativeWindConfig, {
